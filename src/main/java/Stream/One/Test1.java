@@ -17,13 +17,14 @@ public class Test1 {
         Predicate<Instructor> moreThanTen =
                 (i) -> i.getYears() > 10;
 
+        //get List
         List<Instructor> baseInfo = FunctionInstructors.getAll();
 
-        Map<String, List<String>> afterStream =
+        Map<String, List<String>> afterStream = // set <K,V>
                 baseInfo.stream()
                         .filter(isOnline)
                         .filter(moreThanTen)
-                        .collect(Collectors.toMap
+                        .collect(Collectors.toMap // set <K,V>
                                 (Instructor::getName,
                                         Instructor::getCourse));
     }
