@@ -19,6 +19,7 @@ public class Test1 {
 
         //get List
         List<Instructor> baseInfo = FunctionInstructors.getAll();
+        System.out.println(baseInfo);
 
         Map<String, List<String>> afterStream = // set <K,V>
                 baseInfo.stream()
@@ -27,6 +28,8 @@ public class Test1 {
                         .collect(Collectors.toMap // set <K,V>
                                 (Instructor::getName,
                                         Instructor::getCourse));
+
+        System.out.println(afterStream);
     }
 
 }
