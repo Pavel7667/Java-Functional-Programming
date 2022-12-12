@@ -23,5 +23,15 @@ public class StreamVsCollections {
         Stream<String> namesStream = names.stream();
         // no add or remove operation
 
+        for (String e : names) {
+            System.out.println(e);
+        }
+        for (String e : names) {
+            System.out.println(e);
+        }
+        namesStream.forEach(System.out::println);
+        namesStream.forEach(System.out::println);
+
+
     }
 }

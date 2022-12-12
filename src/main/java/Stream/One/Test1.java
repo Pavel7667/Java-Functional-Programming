@@ -23,6 +23,7 @@ public class Test1 {
 
         Map<String, List<String>> afterStream = // set <K,V>
                 baseInfo.stream()
+                        .peek(instructor -> System.out.println(instructor))
                         .filter(isOnline)
                         .filter(moreThanTen)
                         .collect(Collectors.toMap // set <K,V>
