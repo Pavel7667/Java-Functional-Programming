@@ -11,7 +11,7 @@ public class IntStreamExample {
         numbers.forEach(System.out::println);
 
         //iterate
-        numbers = IntStream.iterate(0, i -> i + 2).limit(5);
+        numbers = IntStream.iterate(0, i -> i + 2);
         numbers.forEach(System.out::println);
 
         // Random Generator
