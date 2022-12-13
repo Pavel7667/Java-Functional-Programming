@@ -8,19 +8,14 @@ import java.util.List;
 public class StreamOperations {
     public static void main(String[] args) {
 
-        long countOfElement = FunctionInstructors.getAll()
+        boolean haveCourseJ = FunctionInstructors.getAll()
                 .stream()
                 .map(Instructor::getCourse)
                 .flatMap(List::stream)
-                .count();
+                .noneMatch(e -> e.startsWith("J"));
 
-        List<String> elementNoDuplicate = FunctionInstructors.getAll()
-                .stream()
-                .map(Instructor::getCourse)
-                .flatMap(List::stream)
-                .distinct()
-                .sorted()
-                .toList();
+        System.out.println(haveCourseJ);
+
 
     }
 }
