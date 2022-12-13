@@ -1,29 +1,21 @@
 package NumericSteam;
 
-import java.util.Random;
+import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class IntStreamExample {
     public static void main(String[] args) {
 
-        //using of
-        IntStream numbers = IntStream.of(1, 2, 3, 4, 5);
-        numbers.forEach(System.out::println);
+        // Converting Stream of PRIMITIVE to List<Integers>
+        List<Integer> numbers;
+        IntStream numStream = IntStream.rangeClosed(1, 500);
+        numbers = numStream.boxed().collect(Collectors.toList());
 
-        //iterate
-        numbers = IntStream.iterate(0, i -> i + 2);
-        numbers.forEach(System.out::println);
+        int sum = numbers.stream()
+                .mapToInt(Integer::intValue)
+                .reduce(1, (a, b) -> (a * 3) * (b * 2));
 
-        // Random Generator
-        numbers = IntStream.generate(new Random()::nextInt).limit(5);
-        numbers.forEach(System.out::println);
-
-        // range 1234
-        numbers = IntStream.range(1, 5);
-        numbers.forEach(System.out::println);
-
-        // rangeClosed 12345
-        numbers = IntStream.rangeClosed(1, 5);
-        numbers.forEach(System.out::println);
+        System.out.println(sum);
     }
 }
