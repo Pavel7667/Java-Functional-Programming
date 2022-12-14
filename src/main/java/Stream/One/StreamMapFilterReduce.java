@@ -1,7 +1,7 @@
 package Stream.One;
 
-import Functional_Java_Interface.Instructor;
-import Functional_Java_Interface.Instructors;
+import functional_Java_Interface.Instructor;
+import functional_Java_Interface.Instructors;
 
 public class StreamMapFilterReduce {
     public static void main(String[] args) {
