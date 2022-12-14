@@ -19,6 +19,7 @@ public class ParallelOne {
 
     }
 
+
     public static int sumSequentialStream() {
         return IntStream.rangeClosed(0, 500000000).sum();
     }
