@@ -1,7 +1,7 @@
 package Stream.One;
 
-import Functional_Java_Interface.FunctionInstructors;
 import Functional_Java_Interface.Instructor;
+import Functional_Java_Interface.Instructors;
 
 import java.util.Arrays;
 import java.util.List;
@@ -14,7 +14,7 @@ public class ReduceExample {
         Optional result = list.stream().reduce((a, b) -> a + b);
         System.out.println(result.get());
 
-        Optional instructorList = FunctionInstructors.getAll()
+        Optional instructorList = Instructors.getAll()
                 .stream()
                 .reduce((s1, s2) -> s2.getYears() > s1.getYears() ? s2 : s1);
 

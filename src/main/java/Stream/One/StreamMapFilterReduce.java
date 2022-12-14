@@ -1,12 +1,12 @@
 package Stream.One;
 
-import Functional_Java_Interface.FunctionInstructors;
 import Functional_Java_Interface.Instructor;
+import Functional_Java_Interface.Instructors;
 
 public class StreamMapFilterReduce {
     public static void main(String[] args) {
 
-        int yearsOfExperienceAndOnline = FunctionInstructors.getAll()
+        int yearsOfExperienceAndOnline = Instructors.getAll()
                 .stream()
                 .filter(Instructor::isOnlineCourse)
                 .map(Instructor::getYears)

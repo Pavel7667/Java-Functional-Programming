@@ -1,7 +1,7 @@
 package Stream.One;
 
-import Functional_Java_Interface.FunctionInstructors;
 import Functional_Java_Interface.Instructor;
+import Functional_Java_Interface.Instructors;
 
 import java.util.List;
 import java.util.Map;
@@ -18,7 +18,7 @@ public class Test1 {
                 (i) -> i.getYears() > 10;
 
         //get List
-        List<Instructor> baseInfo = FunctionInstructors.getAll();
+        List<Instructor> baseInfo = Instructors.getAll();
         System.out.println(baseInfo);
 
         Map<String, List<String>> afterStream = // set <K,V>

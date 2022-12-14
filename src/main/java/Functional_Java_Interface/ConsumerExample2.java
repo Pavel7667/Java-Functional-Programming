@@ -5,7 +5,7 @@ import java.util.function.Consumer;
 
 public class ConsumerExample2 {
     public static void main(String[] args) {
-        List<Instructor> instructors = FunctionInstructors.getAll();
+        List<Instructor> instructors = Instructors.getAll();
 
         // looping through all the instructor and printing out values
         Consumer<Instructor> all = (s1) -> System.out.println(s1);

@@ -1,7 +1,7 @@
 package Stream.One;
 
-import Functional_Java_Interface.FunctionInstructors;
 import Functional_Java_Interface.Instructor;
+import Functional_Java_Interface.Instructors;
 
 import java.util.List;
 import java.util.Set;
@@ -10,13 +10,13 @@ import java.util.stream.Collectors;
 public class FlatMapEx {
     public static void main(String[] args) {
 
-        List<String> allCourses = FunctionInstructors.getAll()
+        List<String> allCourses = Instructors.getAll()
                 .stream()
                 .map(Instructor::getCourse)
                 .flatMap(List::stream)// тут
                 .collect(Collectors.toList());
 
-        Set<String> allNoDuplicateCourse = FunctionInstructors.getAll()
+        Set<String> allNoDuplicateCourse = Instructors.getAll()
                 .stream()
                 .map(Instructor::getCourse)
                 .flatMap(List::stream)// тут

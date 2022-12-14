@@ -3,7 +3,7 @@ package Functional_Java_Interface;
 import java.util.Arrays;
 import java.util.List;
 
-public class FunctionInstructors {
+public class Instructors {
 
     public static List<Instructor> getAll() {
         Instructor instructor1 = new Instructor("mike", "IT", "m", 1, true,
@@ -16,7 +16,10 @@ public class FunctionInstructors {
                 Arrays.asList("tttt", "xxx", "asfasf"));
         Instructor instructor5 = new Instructor("Tom", "Driver", "m", 5, true,
                 Arrays.asList("Audi", "Ford", "Subaru"));
+        Instructor instructor6 = new Instructor("Tom2", "Driver", "m", 5, true,
+                Arrays.asList("Audi", "Ford", "Subaru"));
 
-        return Arrays.asList(instructor1, instructor2, instructor3, instructor4, instructor5);
+        return Arrays.asList(instructor1, instructor2, instructor3,
+                instructor4, instructor5, instructor6);
     }
 }

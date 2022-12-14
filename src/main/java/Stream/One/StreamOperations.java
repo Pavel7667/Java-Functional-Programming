@@ -1,14 +1,14 @@
 package Stream.One;
 
-import Functional_Java_Interface.FunctionInstructors;
 import Functional_Java_Interface.Instructor;
+import Functional_Java_Interface.Instructors;
 
 import java.util.List;
 
 public class StreamOperations {
     public static void main(String[] args) {
 
-        boolean haveCourseJ = FunctionInstructors.getAll()
+        boolean haveCourseJ = Instructors.getAll()
                 .stream()
                 .map(Instructor::getCourse)
                 .flatMap(List::stream)

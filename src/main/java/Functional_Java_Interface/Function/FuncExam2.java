@@ -1,7 +1,7 @@
 package Functional_Java_Interface.Function;
 
-import Functional_Java_Interface.FunctionInstructors;
 import Functional_Java_Interface.Instructor;
+import Functional_Java_Interface.Instructors;
 
 import java.util.HashMap;
 import java.util.List;
@@ -25,7 +25,7 @@ public class FuncExam2 {
                     return map;
                 });
 
-        System.out.println(mapFunction.apply(FunctionInstructors.getAll()));
+        System.out.println(mapFunction.apply(Instructors.getAll()));
 
     }
 }

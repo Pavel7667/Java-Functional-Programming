@@ -5,7 +5,7 @@ import java.util.function.BiConsumer;
 
 public class BiConsumerExample2 {
     public static void main(String[] args) {
-        List<Instructor> list = FunctionInstructors.getAll();
+        List<Instructor> list = Instructors.getAll();
 
         // how ForEach BiConsumer (param,param)
         BiConsumer<String, String> biConsumer = (name, gender) -> {

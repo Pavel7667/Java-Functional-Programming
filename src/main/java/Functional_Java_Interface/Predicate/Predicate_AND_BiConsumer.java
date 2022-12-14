@@ -1,7 +1,7 @@
 package Functional_Java_Interface.Predicate;
 
-import Functional_Java_Interface.FunctionInstructors;
 import Functional_Java_Interface.Instructor;
+import Functional_Java_Interface.Instructors;
 
 import java.util.List;
 import java.util.function.BiConsumer;
@@ -15,7 +15,7 @@ public class Predicate_AND_BiConsumer {
         BiConsumer<String, List<String>> biConsumer = (name, course) -> {
             System.out.println(name + "   " + course);
         };
-        List<Instructor> instructors = FunctionInstructors.getAll();
+        List<Instructor> instructors = Instructors.getAll();
         instructors.forEach(element -> {
             if (p1.and(p2).test(element)) {
                 biConsumer.accept(element.getName(), element.getCourse());

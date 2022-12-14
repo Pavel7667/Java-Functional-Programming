@@ -1,7 +1,7 @@
 package Functional_Java_Interface.Predicate;
 
-import Functional_Java_Interface.FunctionInstructors;
 import Functional_Java_Interface.Instructor;
+import Functional_Java_Interface.Instructors;
 
 import java.util.List;
 import java.util.function.Predicate;
@@ -24,7 +24,7 @@ public class PredicateExample {
         // case years > 10
         Predicate<Instructor> years = (instructor -> instructor.getYears() > 10);
 
-        List<Instructor> instructors = FunctionInstructors.getAll();
+        List<Instructor> instructors = Instructors.getAll();
         instructors.forEach(instructor -> {
             if (offline.and(years).test(instructor)) {
                 System.out.println(instructor);
