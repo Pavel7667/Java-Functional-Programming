@@ -2,6 +2,7 @@ package functionalprogrammingamigoscode;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 import static functionalprogrammingamigoscode.Inrto.Person.Gender.FEMALE;
 import static functionalprogrammingamigoscode.Inrto.Person.Gender.MALE;
@@ -35,8 +36,10 @@ public class Inrto {
 
     // Declarative approach
     public static void soutCountOfFemaleUsingStream(List<Person> people) {
+        Predicate<Person> personPredicate = person -> FEMALE.equals(person.gender);
+
         people.stream()
-                .filter(person -> FEMALE.equals(person.gender))
+                .filter(personPredicate)
                 .forEach(System.out::println);
     }
 
