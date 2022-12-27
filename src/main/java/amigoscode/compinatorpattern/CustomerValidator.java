@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.time.Period;
 
 /**
- * Simple Custom Validator class in Imperative approach
+ * Simple Custom Validator class in Declarative approach
  */
 public class CustomerValidator {
 
@@ -22,10 +22,5 @@ public class CustomerValidator {
                 .getYears() > 16;
     }
 
-    public boolean isValid(Customer customer) {
-        return isEmailValid(customer.getEmail()) &&
-                isPhoneNumber(customer.getPhoneNumber()) &&
-                isAdult(customer.getDob());
 
-    }
 }
