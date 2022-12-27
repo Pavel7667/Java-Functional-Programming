@@ -4,26 +4,16 @@ import java.util.function.Function;
 
 public class _Function {
     public static void main(String[] args) {
-        int incrementI = incrementI(0);
-        System.out.println(incrementI);
-        int incrementD = incrementD(0);
-        System.out.println(incrementD);
-        int incrementF = incrementFUnction.apply(0);
-        System.out.println(incrementF);
-    }
+        Function<Integer, Integer> combineFunction =
+                incrementFunction.andThen(multiplyFunction);
 
-    //    Imperative approach
-    static int incrementI(int number) {
-        return number + 1;
-    }
+        Integer apply = combineFunction.apply(3);
 
-    //    Declarative  approach
-    static int incrementD(int number) {
-        Function<Integer, Integer> sums = e -> ++e;
-        return sums.apply(number);
+        System.out.println(apply);
     }
 
     // Functional Style
-    static Function<Integer, Integer> incrementFUnction = e -> ++e;
+    static Function<Integer, Integer> incrementFunction = e -> ++e;
+    static Function<Integer, Integer> multiplyFunction = e -> e * e;
 
 }
