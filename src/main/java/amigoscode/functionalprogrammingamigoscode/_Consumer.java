@@ -1,4 +1,4 @@
-package functionalprogrammingamigoscode;
+package amigoscode.functionalprogrammingamigoscode;
 
 import java.util.List;
 import java.util.function.BiConsumer;

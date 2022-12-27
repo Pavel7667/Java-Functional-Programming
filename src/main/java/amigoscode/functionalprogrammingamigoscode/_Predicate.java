@@ -1,13 +1,13 @@
-package functionalprogrammingamigoscode;
+package amigoscode.functionalprogrammingamigoscode;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
-import static functionalprogrammingamigoscode.Inrto.Person.Gender.FEMALE;
-import static functionalprogrammingamigoscode.Inrto.Person.Gender.MALE;
+import static amigoscode.functionalprogrammingamigoscode._Predicate.Person.Gender.FEMALE;
+import static amigoscode.functionalprogrammingamigoscode._Predicate.Person.Gender.MALE;
 
-public class Inrto {
+public class _Predicate {
     public static void main(String[] args) {
         List<Person> people = List.of(
                 new Person("John", MALE),

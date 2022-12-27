@@ -1,12 +1,9 @@
-package stremsbyamigoscode;
+package amigoscode.stremsbyamigoscode;
 
 import java.util.List;
-import java.util.function.Function;
-import java.util.function.IntConsumer;
-import java.util.function.ToIntFunction;
 
-import static stremsbyamigoscode.MyStream.Gender.FEMALE;
-import static stremsbyamigoscode.MyStream.Gender.MALE;
+import static amigoscode.stremsbyamigoscode.MyStream.Gender.FEMALE;
+import static amigoscode.stremsbyamigoscode.MyStream.Gender.MALE;
 
 public class MyStream {
 
@@ -20,17 +17,21 @@ public class MyStream {
                 new Person("Alice", FEMALE)
         );
 
-        Function<Person, String> personStringFunction = person -> person.name;
-        ToIntFunction<String> length = String::length;
-        IntConsumer println = System.out::println;
+//        Function<Person, String> personStringFunction = person -> person.name;
+//        ToIntFunction<String> length = String::length;
+//        IntConsumer println = System.out::println;
+//
+//        people.stream()
+//                .map(personStringFunction)
+//                .mapToInt(length)
+//                .forEach(println);
 
-        people.stream()
-                .map(personStringFunction)
-                .mapToInt(length)
-                .forEach(println);
+        boolean b = people.stream()
+                .anyMatch(person -> FEMALE.equals(person.gender));
+
+        System.out.println(b);
 
     }
-
     static class Person {
         private final String name;
         private final Gender gender;
@@ -48,7 +49,6 @@ public class MyStream {
                     '}';
         }
     }
-
     enum Gender {
         MALE, FEMALE
     }
