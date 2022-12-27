@@ -1,6 +1,7 @@
 package functionalprogrammingamigoscode;
 
 import java.util.List;
+import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
 public class _Consumer {
@@ -20,11 +21,17 @@ public class _Consumer {
             greetCustomer(e);
             System.out.println("declarative/////");
             consumerFunction.accept(e);
+            System.out.println("BI/////");
+            consumerBiFunction.accept(e, true);
         }
+
 
     }
 
     static Consumer<Customer> consumerFunction = _Consumer::greetCustomer;
+    static BiConsumer<Customer, Boolean> consumerBiFunction =
+            (customer, phone) -> System.out.println(customer.customerName
+                    + (phone ? customer.customerPhoneNumber : "****"));
 
     static void greetCustomer(Customer customer) {
         System.out.println(customer.toString());
@@ -37,6 +44,14 @@ public class _Consumer {
         Customer(String customerName, String customerPhoneNumber) {
             this.customerName = customerName;
             this.customerPhoneNumber = customerPhoneNumber;
+        }
+
+        public String getCustomerName() {
+            return customerName;
+        }
+
+        public String getCustomerPhoneNumber() {
+            return customerPhoneNumber;
         }
 
         @Override
