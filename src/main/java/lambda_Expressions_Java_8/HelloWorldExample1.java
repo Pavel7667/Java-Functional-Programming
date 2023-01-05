@@ -15,13 +15,9 @@ public class HelloWorldExample1 implements HelloWorldInterface {
         HelloWorldExample1 test = new HelloWorldExample1();
 
         // generate custom Override for this Link
-        HelloWorldInterface test2 = () -> {
-            return "Override using Lambda_ONE";
-        };
+        HelloWorldInterface test2 = () -> "Override using Lambda_ONE";
         // generate custom Override for this Link
-        HelloWorldInterface test3 = () -> {
-            return "Override using Lambda_TWO";
-        };
+        HelloWorldInterface test3 = () -> "Override using Lambda_TWO";
 
         System.out.println(test.sayHelloWorld());
         System.out.println(test2.sayHelloWorld());
